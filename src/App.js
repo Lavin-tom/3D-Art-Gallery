@@ -6,53 +6,45 @@ import { TextureLoader, Vector3 } from 'three'
 
 const ART_PIECES = [
   {
-    title: 'Beautiful Beast',
-    imgPath: '/beauty_and_beast.jpeg',
+    title: 'Art1',
+    imgPath: '/ar1.jpg',
   },
   {
-    title: 'Stillness',
-    imgPath: '/crane.jpeg',
+    title: 'Art2',
+    imgPath: '/ar2.jpg',
   },
   {
-    title: 'Foxy',
-    imgPath: '/foxy.jpeg',
+    title: 'Art3',
+    imgPath: '/ar3.jpg',
   },
   {
-    title: 'Gentle Giant',
-    imgPath: '/horse_sketch.jpeg',
+    title: 'Art4',
+    imgPath: '/ar4.jpg',
   },
   {
-    title: 'Purity',
-    imgPath: '/kindness.jpeg',
+    title: 'Art5',
+    imgPath: '/ar5.jpg',
   },
   {
-    title: 'Lonely Together',
-    imgPath: '/lonely_together.jpeg',
+    title: 'Art6',
+    imgPath: '/ar6.jpg',
   },
   {
-    title: 'Owl',
-    imgPath: '/owl.jpeg',
+    title: 'Art7',
+    imgPath: '/ar7.jpg',
   },
   {
-    title: 'Menace',
-    imgPath: '/panther.jpeg',
+    title: 'Art8',
+    imgPath: '/ar8.jpg',
   },
   {
-    title: 'Paradise',
-    imgPath: '/paradise.jpeg',
+    title: 'Art9',
+    imgPath: '/ar9.jpg',
   },
   {
-    title: 'Friendship',
-    imgPath: '/sprited_away.jpeg',
-  },
-  {
-    title: 'Wanderlust',
-    imgPath: '/wonder.jpeg',
-  },
-  {
-    title: 'Serenity',
-    imgPath: '/forest.jpeg',
-  },
+    title: 'Art10',
+    imgPath: '/ar10.jpg',
+  }
 ]
 
 const WallArt = (props) => {
