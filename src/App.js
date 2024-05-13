@@ -69,7 +69,8 @@ const WallArt = (props) => {
           color={0xffffff}
         />
         <mesh castShadow position={[(i + 1) * (imageWidth + gap) + (i + 1), 0, 0]}>
-          <boxBufferGeometry attach="geometry" args={[imageWidth, h / 2, 0.07]} />
+          <boxBufferGeometry attach="geometry" args={[imageWidth, imageWidth, 0.07]} />
+          //<boxBufferGeometry attach="geometry" args={[imageWidth, h / 2, 0.07]} />
           <meshStandardMaterial
             attach="material"
             map={texture}
