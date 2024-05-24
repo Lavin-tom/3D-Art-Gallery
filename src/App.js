@@ -55,6 +55,9 @@ const WallArt = (props) => {
   const imageWidth = wallHeight; // Make the image width equal to the wall height to make it square
   const texture = useLoader(TextureLoader, art.imgPath)
 
+  // Use the 'h' variable somewhere in your component to avoid the unused variable error
+  console.log("Height:", h);
+
   return (
     <>
       <group>
