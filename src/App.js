@@ -51,8 +51,8 @@ const WallArt = (props) => {
   const { art, i } = props
   const { width: w, height: h } = useThree((state) => state.viewport);
   const gap = 4;
-  const wallHeight = 15; // Adjust the height of the wall as needed
-  const imageWidth = wallHeight; // Make the image width equal to the wall height to make it square
+  const wallHeight = 5; 
+  const imageWidth = wallHeight; 
   const texture = useLoader(TextureLoader, art.imgPath)
 
   // Use the 'h' variable somewhere in your component to avoid the unused variable error
@@ -134,7 +134,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
             castShadow
           >
-            Art is knowing which ones to keep.
+
           </Text>
           <Text
             position={[0, -0.5, 1.5]}
@@ -143,7 +143,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
           // castShadow
           >
-            ~ Scott Adams
+            ~ Lavin Tom
           </Text>
 
           {ART_PIECES.map((art, i) => {
