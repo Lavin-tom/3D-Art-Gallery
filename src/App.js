@@ -51,7 +51,8 @@ const WallArt = (props) => {
   const { art, i } = props
   const { width: w, height: h } = useThree((state) => state.viewport);
   const gap = 4;
-  const imageWidth = 3;
+  const wallHeight = 15; // Adjust the height of the wall as needed
+  const imageWidth = wallHeight; // Make the image width equal to the wall height to make it square
   const texture = useLoader(TextureLoader, art.imgPath)
 
   return (
@@ -70,7 +71,6 @@ const WallArt = (props) => {
         />
         <mesh castShadow position={[(i + 1) * (imageWidth + gap) + (i + 1), 0, 0]}>
           <boxBufferGeometry attach="geometry" args={[imageWidth, imageWidth, 0.07]} />
-          //<boxBufferGeometry attach="geometry" args={[imageWidth, h / 2, 0.07]} />
           <meshStandardMaterial
             attach="material"
             map={texture}
@@ -109,7 +109,7 @@ const Scene = () => {
         Loading 3D Art Gallery...
       </Html>
     }>
-      <ScrollControls infinite horizontal damping={4} pages={39*Math.exp(-0.11 * screenWidth) } distance={1}>
+      <ScrollControls infinite horizontal damping={4} pages={39 * Math.exp(-0.11 * screenWidth)} distance={1}>
         <Scroll>
           <Text
             position-z={0}
@@ -120,7 +120,7 @@ const Scene = () => {
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
             castShadow
           >
-            Creativity is allowing yourself to make mistakes.
+            Every stroke, no matter how small, embodies artistry when seen through that lens.
           </Text>
           <Text
             position-z={1}
@@ -128,7 +128,6 @@ const Scene = () => {
             anchorY="top"
             scale={[textScale, textScale, textScale]}
             color="#FBA90A"
-            // font="https://fonts.gstatic.com/s/cookie/v8/syky-y18lb0tSbf9kgqU.woff"
             font="https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff"
             castShadow
           >
@@ -180,7 +179,6 @@ function App() {
       <Scene />
 
       <EffectComposer>
-        {/* <Noise opacity={0.01} /> */}
         <Vignette eskil={false} offset={0.1} darkness={0.5} />
       </EffectComposer>
 
